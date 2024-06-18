@@ -64,8 +64,9 @@ model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy']
 
 ![accuracy](https://github.com/Equilibrare/Machine-Learning/assets/90241150/5f6b6541-0638-470b-8b74-a3226dd1b30b)
 
+# Save the model
 
-for the comparasion 
+* After we train the model, we need to save the model. You can check the models that have been built [model_project](modelEquilibrare.h5)
 # Converting the model to Tensorflow Lite
 
 
