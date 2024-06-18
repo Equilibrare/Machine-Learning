@@ -9,12 +9,18 @@ The model uses a sequential architecture with an embedding layer to convert word
 [Fix notebook](https://colab.research.google.com/drive/1F-_sa02ywLOaSHNZCtbcthbz6BQWMXH9#scrollTo=ba10a13c-8d82-4977-bd67-a01cc70c87dd)
 
 # Import the required libraries :
-**Note**: This notebook requires TensorFlow 2.3+ for full quantization, which currently does not work for all types of models. In particular, this notebook expects a Keras-built model and this conversion strategy currently doesn't work with models imported from a frozen graph. 
+**Note**: This notebook requires TensorFlow 2.15.0 , and to run the provided code for creating and training the text classification model, as well as converting it to TensorFlow Lite with post-training quantization, you'll need the following libraries:
 
+* Pandas
 * Tensorflow 
 * Numpy
-
-In order to quantize both the input and output tensors, we need TFLiteConverter APIs that are available in TensorFlow r2.3 or higher:
+* nltk
+* re
+* Sastrawi
+* matplotlib
+* wordcloud
+* sci-kit learn
+* imbalanced-learn
 
 # Prepare the training data
 
