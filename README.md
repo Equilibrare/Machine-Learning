@@ -53,20 +53,22 @@ model = tf.keras.Sequential([
 ```
 
 # Configure the Model 
-* Compile the model with binary cross-entropy loss and the Adam optimizer. The model is configured to evaluate performance based on accuracy.
+Compile the model with binary cross-entropy loss and the Adam optimizer. The model is configured to evaluate performance based on accuracy.
 
 ```python
 model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
 ```
 
 # Train the Model 
-* Now we can train the model using the training and validation data we prepared earlier. The model has been trained on over 95.000 labeled Sentences and got 99.81% accuracy on test data. For trining model we use 10 epoch and 16 batch size.
+Now we can train the model using the training and validation data we prepared earlier. The model has been trained on over 95.000 labeled Sentences and got 99.81% accuracy on test data. For trining model we use 10 epoch and 16 batch size.
 
 ![accuracy](https://github.com/Equilibrare/Machine-Learning/assets/90241150/5f6b6541-0638-470b-8b74-a3226dd1b30b)
 
 # Save the model
+After we train the model, we need to save the model. You can check the models that have been built [model_project](modelEquilibrare.h5)
 
-* After we train the model, we need to save the model. You can check the models that have been built [model_project](modelEquilibrare.h5)
 # Converting the model to Tensorflow Lite
 
+For creating a TensorFlow Lite model is just a few lines of code you can check it here [TFLiteConverter](https://www.tensorflow.org/api_docs/python/tf/lite/TFLiteConverter). 
 
+You can check here to see [result TFLite](model.tflite)
