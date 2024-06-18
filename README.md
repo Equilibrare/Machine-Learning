@@ -66,6 +66,8 @@ Now we can train the model using the training and validation data we prepared ea
 # Save the model
 After we train the model, we need to save the model. You can check the models that have been built [model_project](modelEquilibrare.h5)
 
+The saved model can be used to predict the data by load the model to your notebook. 
+
 # Converting the model to Tensorflow Lite
 
 For creating a TensorFlow Lite model is just a few lines of code you can check it here [TFLiteConverter](https://www.tensorflow.org/api_docs/python/tf/lite/TFLiteConverter). 
