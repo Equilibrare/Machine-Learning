@@ -60,9 +60,9 @@ model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy']
 ```
 
 # Train the Model 
-* Now we can train the model using the training and validation data we prepared earlier by 10 epoch and 16 batch size. The resulr is shown below:
+* Now we can train the model using the training and validation data we prepared earlier by 10 epoch and 16 batch size. The result is shown below:
 
-![image](https://user-images.githubusercontent.com/67249292/120916823-f07d2880-c6d5-11eb-8635-c5323aca9741.png)
+![Epoch](https://github.com/Equilibrare/Machine-Learning/assets/90241150/56cc7ac9-0050-4c42-bd56-a7d4debc7e00)
 
 ```python
 history = model.fit(
