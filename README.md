@@ -39,11 +39,18 @@ We'll create a custom neural network for text classification. The model consists
 
 # Create the base model
 
-When instantiating the [MobileNet V2](https://www.tensorflow.org/api_docs/python/tf/keras/applications/mobilenet_v2), we specify the include_top=False argument in order to load the network without the classification layers at the top. Then we set trainable false to freeze all the weights in the base model. This effectively converts the model into a feature extractor because all the pre-trained weights and biases are preserved in the lower layers when we begin training for our classification head.
+1. **Embedding Layer**: Converts each word index into a 16-dimensional vector.
+2. **Global Average Pooling Layer**: Averages the embedding vectors, making the model invariant to the position of words.
+3. **Dense Layers**: A fully connected layer with 24 neurons and ReLU activation, followed by an output layer with a single neuron and sigmoid activation for binary classification.
 
-# Add a classification head
-
-Now we create a new [Sequential](https://www.tensorflow.org/api_docs/python/tf/keras/Sequential) model and pass the frozen [MobileNet V2](https://www.tensorflow.org/api_docs/python/tf/keras/applications/mobilenet_v2) as the base of the graph, and append new classification layers so we can set the final output dimension to match the number of classes in our dataset.
+```python
+model = tf.keras.Sequential([
+    tf.keras.layers.Embedding(vocab_size, embedding_dim, input_length=max_length),
+    tf.keras.layers.GlobalAveragePooling1D(),
+    tf.keras.layers.Dense(24, activation='relu'),
+    tf.keras.layers.Dense(1, activation='sigmoid')
+])
+```
 
 # Configure the model :
 
