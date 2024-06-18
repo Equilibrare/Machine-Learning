@@ -59,7 +59,7 @@ model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy']
 ```
 
 # Train the Model 
-Now we can train the model using the training and validation data we prepared earlier. The model has been trained on over 95.000 labeled Sentences and got 99.81% accuracy on test data. For trining model we use 10 epoch and 16 batch size.
+Now we can train the model using the training and validation data we prepared earlier. The model has been trained on over 9.925 labeled Sentences and got 99.81% accuracy on test data. For trining model we use 10 epoch and 16 batch size.
 
 ![accuracy](https://github.com/Equilibrare/Machine-Learning/assets/90241150/5f6b6541-0638-470b-8b74-a3226dd1b30b)
 
