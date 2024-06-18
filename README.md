@@ -1,12 +1,9 @@
 # Machine-Learning
 
 # Machine Learning Home Agriculture Monitoring System
-We'll use TensorFlow 2.15.0 to create an anxiety detection model, training it with a Twitter dataset, and convert it to TensorFlow Lite using post-training quantization.
+We'll use TensorFlow 2.15.0 to create an anxiety detection model, training it with a labeled Twitter dataset, and convert it to TensorFlow Lite using post-training quantization.
 
-The model is using Tensorflow 
-based on a pre-trained version of MobileNet V2. We'll start by retraining only the classification layers, reusing MobileNet's pre-trained feature extractor layers. Then we'll fine-tune the model by updating weights in some of the feature extractor layers. This type of transfer learning is much faster than training the entire model from scratch.
-
-Once it's trained, we'll use post-training quantization to convert all parameters to int8 format, which reduces the model size and increases inferencing speed. This format is also required for compatibility on the TFlite in android.
+The model uses a sequential architecture with an embedding layer to convert words into dense vectors. We'll start by training this custom neural network from scratch, including an embedding layer, a global average pooling layer, and dense layers for classification.
 
 # Notebook ML 
 [Fix notebook](https://github.com/maulanaakbardj/Home-Agriculture-Monitoring-System/blob/main/ML/notebook/leaf_classification_fix.ipynb)
