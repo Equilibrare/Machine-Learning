@@ -27,21 +27,15 @@ The model uses a sequential architecture with an embedding layer to convert word
 * First let's download and organize the leaf disease dataset we'll use to retrain the model. Here we use an example of a leaf disease dataset image from Kaggle ( [Depression and Anxiety in Twitter (ID)]([https://www.kaggle.com/emmarex/plantdisease](https://www.kaggle.com/datasets/stevenhans/depression-and-anxiety-in-twitter-id 
 ))) 
  
- * Of several datasets combined into one [dataset](https://github.com/maulanaakbardj/Home-Agriculture-Monitoring-System/tree/main/ML/Data)
+ * We split the dataset into training and validation sets. We use 80% of the data for training and 20% for validation.
  
- * We use ImageDataGenerator to rescale the image data into float values (divide by 255 so the tensor values are between 0 and 1), and call flow_from_directory() to create two generators: one for the training dataset and one for the validation dataset.
+ * Tokenize the text data, considering the top 1000 most frequent words and replacing out-of-vocabulary words with a special token ("<OOV>"). Convert the tokenized text into padded sequences of uniform length (50 words).
  
- * On each iteration, these generators provide a batch of images by reading images from disk and processing them to the proper tensor size (224 x 224). The output is a tuple of (images, labels).
- 
- * Save the class labels to a text file.
+ * Convert the labels into numerical values suitable for training the model.
   
 # Build the model
 
-We'll create a model that's capable of transfer learning on just the last fully-connected layer.
-
-We'll start with [MobileNet V2](https://www.tensorflow.org/api_docs/python/tf/keras/applications/mobilenet_v2) from Keras as the base model, which is pre-trained with the ImageNet dataset (trained to recognize 1,000 classes). This provides us a great feature extractor for image classification and we can then train a new classification layer with our  dataset. 
-
-**note** : Paper [MobileNetV2: Inverted Residuals and Linear Bottlenecks](https://arxiv.org/abs/1801.04381)
+We'll create a custom neural network for text classification. The model consists of an embedding layer, a global average pooling layer, and dense layers for classification.
 
 # Create the base model
 
