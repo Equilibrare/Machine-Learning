@@ -60,21 +60,12 @@ model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy']
 ```
 
 # Train the Model 
-* Now we can train the model using the training and validation data we prepared earlier by 10 epoch and 16 batch size. The result is shown below:
+* Now we can train the model using the training and validation data we prepared earlier. The model has been trained on over 95.000 labeled Sentences and got 99.81% accuracy on test data. For trining model we use 10 epoch and 16 batch size.
 
-![Epoch](https://github.com/Equilibrare/Machine-Learning/assets/90241150/56cc7ac9-0050-4c42-bd56-a7d4debc7e00)
+![accuracy](https://github.com/Equilibrare/Machine-Learning/assets/90241150/5f6b6541-0638-470b-8b74-a3226dd1b30b)
 
-```python
-history = model.fit(
-    training_padded,
-    training_labels,
-    epochs=10,
-    batch_size=16,
-    validation_data=(validation_padded, validation_labels),
-    verbose=2
-)
-```
 
+for the comparasion 
 # Converting the model to Tensorflow Lite
 
 
