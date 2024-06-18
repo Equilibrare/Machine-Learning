@@ -1,6 +1,5 @@
-# Machine-Learning
+# Machine-Learning Equilibarare 
 
-# Machine Learning Home Agriculture Monitoring System
 We'll use TensorFlow 2.15.0 to create an anxiety detection model, training it with a labeled Twitter dataset, and convert it to TensorFlow Lite using post-training quantization.
 
 The model uses a sequential architecture with an embedding layer to convert words into dense vectors. We'll start by training this custom neural network from scratch, including an embedding layer, a global average pooling layer, and dense layers for classification.
