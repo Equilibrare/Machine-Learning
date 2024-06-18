@@ -24,7 +24,8 @@ The model uses a sequential architecture with an embedding layer to convert word
 
 # Prepare the training data
 
-* First let's download and organize the leaf disease dataset we'll use to retrain the model. Here we use an example of a leaf disease dataset image from Kaggle ( [plantdisease](https://www.kaggle.com/emmarex/plantdisease), [new-plant-diseases-dataset](https://www.kaggle.com/vipoooool/new-plant-diseases-dataset),[rice-leaf-diseases](https://www.kaggle.com/vbookshelf/rice-leaf-diseases) ) 
+* First let's download and organize the leaf disease dataset we'll use to retrain the model. Here we use an example of a leaf disease dataset image from Kaggle ( [Depression and Anxiety in Twitter (ID)]([https://www.kaggle.com/emmarex/plantdisease](https://www.kaggle.com/datasets/stevenhans/depression-and-anxiety-in-twitter-id 
+))) 
  
  * Of several datasets combined into one [dataset](https://github.com/maulanaakbardj/Home-Agriculture-Monitoring-System/tree/main/ML/Data)
  
